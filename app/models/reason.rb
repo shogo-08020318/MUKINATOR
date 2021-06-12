@@ -1,4 +1,4 @@
 class Reason < ApplicationRecord
   belongs_to :trouble
-  vaidates :name, presence: true
+  validates :name, presence: true
 end
