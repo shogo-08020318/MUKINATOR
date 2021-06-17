@@ -32,6 +32,11 @@ module MukinatorVer2
     # Don't generate system test files.
     config.generators.system_tests = nil
 
+    # デフォルトの言語を設定
+    config.i18n.default_locale = :ja
+    # 読み込む辞書ファイルのパスを指定
+    config.i18n.load_path += Dir[Rails.root.join('config', 'locales', '**', '*.{rb,yml}').to_s]
+
     # 自動生成ファイルの設定
     config.generators do |g|
       g.skip_routes true      # ルーティング
