@@ -1,0 +1,12 @@
+ja:
+  enums:
+    result:
+      gender:
+        man: '男性'
+        woman: '女性'
+    trouble:
+      kind:
+        health: '健康'
+        ambition: '将来'
+        relationship: '人間関係'
+        money: 'お金'
