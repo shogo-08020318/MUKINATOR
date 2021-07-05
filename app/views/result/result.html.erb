@@ -1,7 +1,42 @@
 <h1>result.html.erb</h1>
-<%= @result.name %>のお悩みは、<br>
-<p><%= @result.reason.trouble.name %></p>
-<p>解決方法は、</p>
-<h1>筋トレです</h1>
-<p><%=@result.reason.name%></p>
-<p>性別は<%= @result.gender_i18n %></p>
+<!--
+ 筋トレ名言 
+<div id="loader-bg">
+  <div id="loader">
+    <%= render 'result/wise_sayings' %>
+  </div>
+</div>
+
+ 解決策 
+<div id="wrap">
+  <div id='resut_wrapper' class='result' >
+    <%= @result.name %>のお悩みは、<br>
+    <p><%= @result.reason.trouble.name %></p>
+    <p>解決方法は、</p>
+    <h1>筋トレです</h1>
+    <p><%=@result.reason.name%></p>
+    <p>性別は<%= @result.gender_i18n %></p>
+  </div>
+</div>
+-->
+
+<div id="loading">
+  <div id="loader">
+    <%= render 'result/wise_sayings' %>
+    <%= image_tag 'img-loading.gif', width: "80", height:"80", alt:"Now Loading..." %>
+    <p>解決策考案中...</p>
+  </div>
+</div>
+
+<div id="wrap">
+  <div id='resut_wrapper' class='result' >
+    <%= @result.name %>のお悩みは、<br>
+    <p><%= @result.reason.trouble.name %></p>
+    <p>解決方法は、</p>
+    <h1>筋トレです</h1>
+    <p><%=@result.reason.name%></p>
+    <h4>単純さ。揺れるものは全て脂肪だ。</h4>
+    <h5>アーノルド・シュワルツェネッガー</h5>
+    <p>性別は<%= @result.gender_i18n %></p>
+  </div>
+</div>
