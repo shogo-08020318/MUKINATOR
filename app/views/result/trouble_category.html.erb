@@ -1,5 +1,5 @@
 <h1>trouble_category.html.erb</h1>
-<%= form_with model: @result, url: trouble_select_results_path, method: :get, local: true do |f| %>
+<%= form_with model: @result, url: trouble_select_results_path, local: true do |f| %>
   <%= f.label '悩みのカテゴリー' %>
   <%= f.collection_radio_buttons :kind, Trouble.kinds_i18n, :first , :last  %>
   
