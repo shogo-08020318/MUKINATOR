@@ -43,6 +43,8 @@
 body {
   text-align: center;
   font-size: 1.5rem;
+  color: #fff;
+  background-color: #484848;
 }
 
 #loading{
@@ -51,7 +53,7 @@ body {
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-color: #fff;
+  background-color: #484848;
   z-index: 9000;
 }
 
@@ -72,3 +74,14 @@ body {
 p{
   margin-bottom: 0;
 }
+
+
+
+
+// body {
+//   background-image: url("back_image1.png");
+//   background-size: cover;
+//   background-repeat: no-repeat;
+//   color: white;
+//   font-size: 250%;
+// }
