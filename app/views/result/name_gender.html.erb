@@ -3,8 +3,5 @@
   <%= f.label 'ニックネーム' %>
   <%= f.text_field :nickname %>
 
-  <%= f.label '性別' %>
-  <%= f.collection_radio_buttons :gender, Result.genders_i18n, :first , :last  %>
-
   <%= f.submit '次へ' %>
 <% end %>
