@@ -9,7 +9,7 @@ class ResultsController < ApplicationController
     # ニックネームと性別をセッションに一時保持
     # binding.pry
     session[:nickname] = params[:result][:nickname]
-    session[:gender] = params[:result][:gender]
+    # session[:gender] = params[:result][:gender]
     # 悩みのカテゴリー選択ページ
     # binding.pry
     render 'result/trouble_category'
@@ -30,7 +30,8 @@ class ResultsController < ApplicationController
     session[:reason] = Reason.find(params[:trouble_id]).id
     # session[:reason] = @reason.id
     # binding.pry
-    @result = Result.new(name: session[:nickname], gender: session[:gender], reason_id: session[:reason])
+    # @result = Result.new(name: session[:nickname], gender: session[:gender], reason_id: session[:reason])
+    @result = Result.new(name: session[:nickname], reason_id: session[:reason])
     # @result = Result.new(result_params)
     # binding.pry
     @result.save!
