@@ -13,7 +13,7 @@ namespace :youtube_task do
     # 検索ワード
     # 複数の検索ワードを使って件s買うすることができない
     # 最後のワードだけを使って検索される
-    keywords = %w[筋トレ HIIT 筋トレ女子]
+    keywords = %w[筋トレ男性 筋トレ女子 HIIT]
 
     # オプションの指定
     # 検索ワード、公開日、取得数
@@ -37,14 +37,23 @@ namespace :youtube_task do
         video_title = item.snippet.title
         video_id = item.id.video_id
         video = "https://www.youtube.com/watch?v=#{video_id}"
-        keyword == '筋トレ女子' ? gender = 1 : gender = 0
+        if keyword == '筋トレ男性'
+          category = 'man'
+        elsif keyword == '筋トレ女子'
+          category = 'woman'
+        else
+          category = 'otther'
+        end
 
-        exercise = Exercise.new(title: video_title, video: video, gender: gender)
+        exercise = Exercise.new(title: video_title, video: video, category: category)
         # 保存に失敗したら止めて知らせる
         begin
+          # puts exercise.title
+          # puts exercise.video
+          # puts exercise.category
           exercise.save
-        rescue '例外発生しました'
-          puts "#{video_title}の保存に失敗しました"
+        rescue Google::APIClient::TransmissionError => e
+          puts e.result.body
         end
       end
     end
