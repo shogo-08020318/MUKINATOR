@@ -36,13 +36,16 @@ namespace :youtube_task do
       response.items.each do |item|
         video_title = item.snippet.title
         video_id = item.id.video_id
-        video = "https://www.youtube.com/watch?v=#{video_id}"
+        # 埋め込み用
+        video = "https://www.youtube.com/embed/#{video_id}"
+        # 直接ブラウザで視聴する用
+        # video = "https://www.youtube.com/watch?v=#{video_id}"
         if keyword == '筋トレ男性'
           category = 'man'
         elsif keyword == '筋トレ女子'
           category = 'woman'
         else
-          category = 'otther'
+          category = 'other'
         end
 
         exercise = Exercise.new(title: video_title, video: video, category: category)
