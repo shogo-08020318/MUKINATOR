@@ -35,6 +35,10 @@ class ResultsController < ApplicationController
     # @result = Result.new(result_params)
     # binding.pry
     @result.save!
+    @video = []
+    @video[0] = Exercise.where(category: 'man').sample
+    @video[1] = Exercise.where(category: 'woman').sample
+    @video[2] = Exercise.where(category: 'other').sample
     render 'result/result'
   end
 
