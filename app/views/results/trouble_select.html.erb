@@ -1,6 +1,6 @@
 <h1>trouble_select.html.erb</h1>
 <%= form_with model: @result, url: results_path, local: true do |f| %>
-  <% troubles.each do |trouble| %>
+  <% @troubles.each do |trouble| %>
     <%= f.radio_button :trouble_id, trouble.id %>
     <%= f.label :trouble_id, trouble.name, value: trouble.id %>
   <% end %>
