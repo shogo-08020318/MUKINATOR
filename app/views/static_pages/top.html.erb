@@ -1,18 +1,27 @@
 <div>  
-  <div class="p-6 image is-500x100">
+  <div class="p-6 image is-500x100 top-logo">
     <%= image_tag 'mukinator.png' %>
   </div>
 
-  <section class='top_man'>
+  <section class='top_man p-6'>
     <%= image_tag 'Group_1.png'%>
   </section>
   
   <section class="section is-large">
-    <p class='is-size-1'>あなたの悩み、全て筋トレで解決します！</p>
+    <p class='top-message'>あなたの悩み、<br>全て筋トレで解決します！</p>
   </section>
 
   <!-- ニックネーム、性別選択ページに遷移 -->
-  <%= link_to new_result_path, method: :get, class: 'top-btn top-btn-gradient' do %>
+  <%= link_to new_result_path, method: :get, class: 'top-btn top-btn-gradient m-6' do %>
     <span><%= "相談を始める" %></span>
   <% end %>
+
+  <div class="contact p-3">
+    <p>お問い合わせ</p>
+  </div>
+
+  <div class="term p-3">
+    <p>利用規約</p>
+  </div>
+
 </div>

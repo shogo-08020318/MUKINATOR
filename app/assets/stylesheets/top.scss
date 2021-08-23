@@ -97,20 +97,22 @@ a.top-btn-gradient:hover:after {
   opacity: 0;
 }
 
-// top_logo
-// .top_logo {
-//   margin-top: 10px;
-// }
-
-// 
-.top_man img {
-  position: relative;
-  top: 200px;
-  width: 800px;
-  height: 1100px;
+// トップロゴ
+.top-logo img {
+  margin-top: 25px;
 }
 
-// .top_man img {
-//   width: 700px;
-//   height: 1000px;
-// }
+// トップ画像
+.top_man img {
+  position: relative;
+  top: 100px;
+  width: 650px;
+  height: 900px;
+}
+
+.top-message {
+  position: relative;
+  top: 10px;
+  font-size: 75px;
+}
+
