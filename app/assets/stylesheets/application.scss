@@ -17,11 +17,16 @@
 // bulma
 @import "bulma";
 
-
+@import 'top';
 @import 'wise_sayings';
 
 // 全てのテキストに適用
 body {
+  top: 100px;
+  text-align: center;
   font-family: 'Reggae One', cursive,  sans-serif;
+  font-size: 1.5rem;
+  color: #fff;
+  background: radial-gradient( circle 1400px at center, #000 50%, #671d92 90% );
+  height: 2150px;
 }
-

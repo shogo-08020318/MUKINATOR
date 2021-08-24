@@ -10,15 +10,17 @@
 html {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  font-size: 62.5%;
+  // 変更
+  // font-size: 62.5%;
 }
 
 .top-btn,
 a.top-btn,
 button.top-btn {
-  font-size: 1.6rem;
+  font-size: 3.6rem;
   font-weight: 700;
-  line-height: 1.5;
+  // 変更
+  line-height: 2;
   position: relative;
   display: inline-block;
   padding: 1rem 4rem;
@@ -39,6 +41,8 @@ button.top-btn {
 
 a.top-btn-gradient {
   font-weight: normal;
+  // 変更
+  width: 70%;
 
   color: #fff;
   border-radius: 0;
@@ -99,20 +103,19 @@ a.top-btn-gradient:hover:after {
 
 // トップロゴ
 .top-logo img {
-  margin-top: 25px;
+  margin-top: 35px;
 }
 
 // トップ画像
 .top_man img {
   position: relative;
-  top: 100px;
-  width: 650px;
-  height: 900px;
+  top: 60px;
+  width: 80%;
+  
 }
 
 .top-message {
   position: relative;
-  top: 10px;
-  font-size: 75px;
+  top: 30px;
+  font-size: 320%;
 }
-
