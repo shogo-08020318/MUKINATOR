@@ -1,20 +1,18 @@
 <div class=' p-6'>
   <h1 class='nickname-title'>ニックネーム入力</h1>
 </div>
-<div class=''>
+
+<div>
   <%= form_with model: @result, url: trouble_category_results_path, local: true do |f| %>
     <%= f.label 'ニックネームを入力してください', class:'is-size-1' %>
-    <div class="p-6">
-      <%= f.text_field :nickname, placeholder: '例: 脳筋　太郎', class: 'input is-link is-large m-2' %>
-      <div class="form-group">
-      <%= f.submit '次へ', class:'button is-large is-outlined m-2 has-text-centered' %>
-      </div>
-      <div class="field is-grouped">
-        <div class="control">
-          <button class="button is-link">Submit</button>
-        </div>
-        <div class="control">
-          <button class="button is-link is-light">Cancel</button>
+    <div class='columns is-mobile'>
+      <div class="p-6 column is-three-fifths is-offset-one-fifth">
+        <%= f.text_field :nickname, placeholder: '例: 脳筋　太郎', class: 'input is-link is-large m-2' %>
+        <div class="field is-grouped">
+
+          <div class="control">
+            <%= f.submit '次へ', class:'m-2 mt-6 custom-btn btn-1 submit-button button' %>
+          </div>
         </div>
       </div>
     </div>
