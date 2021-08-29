@@ -1,0 +1,23 @@
+.category-title {
+  font-size: 400%;
+}
+
+.radio_label {
+  font-size: 250%;
+}
+
+.button_area {
+  display:flex;
+  flex-flow: column;
+}
+
+.button_area label:before {
+	content: '';
+	width: 28px;		/* ボタンの横幅 */
+	height: 28px;		/* ボタンの縦幅 */
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: #00f;
+	border-radius: 50%;
+}
