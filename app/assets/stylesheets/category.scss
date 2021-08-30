@@ -2,22 +2,58 @@
   font-size: 400%;
 }
 
-.radio_label {
-  font-size: 250%;
+.radio-label {
+  font-size: 300%;
 }
 
-.button_area {
+.button-area {
   display:flex;
   flex-flow: column;
 }
 
-.button_area label:before {
-	content: '';
-	width: 28px;		/* ボタンの横幅 */
-	height: 28px;		/* ボタンの縦幅 */
-	position: absolute;
-	top: 0;
-	left: 0;
-	background-color: #00f;
-	border-radius: 50%;
+.radio-button {
+  width: 50px;
+  height: 50px;
 }
+
+// .radio-label {
+//   box-sizing: border-box;
+//   cursor: pointer;
+//   display: inline-block;
+//   padding: 5px 30px;
+//   position: relative;
+//   width: auto;
+// }
+// .radio-label::before {
+//   background: #fff;
+//   border: 1px solid #183c30;
+//   border-radius: 50%;
+//   content: '';
+//   display: block;
+//   height: 16px;
+//   left: 5px;
+//   margin-top: -8px;
+//   position: absolute;
+//   top: 50%;
+//   width: 16px;
+// }
+// .radio-label::after {
+//   background: #7aedc8;
+//   border-radius: 50%;
+//   content: '';
+//   display: block;
+//   height: 10px;
+//   left: 9px;
+//   margin-top: -4px;
+//   opacity: 0;
+//   position: absolute;
+//   top: 50%;
+//   width: 10px;
+// }
+// input[type=radio]:checked + .radio-button::after {
+//   opacity: 1;
+// }
+// input[type="radio"],input[type="checkbox"]{
+// position: relative;
+// top: 2px;
+// }

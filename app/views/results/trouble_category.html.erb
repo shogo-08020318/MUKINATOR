@@ -4,9 +4,9 @@
 
   <p class= 'is-size-1'>悩みのカテゴリーを選択してください</p>
     <%= form_with model: @result, url: trouble_select_results_path, local: true do |f| %>
-      <div class='button_area'>
+      <div class='button-area p-6'>
       <%= f.collection_radio_buttons :kind, Trouble.kinds_i18n, :first , :last do |b| %>
-        <%= b.label(class: "radio_label") { b.radio_button(class: "radio-button m-4") + b.text } %>
+        <%= b.label(class: "radio-label") { b.radio_button(class: "radio-button m-6") + b.text } %>
       <% end %>
       </div>
       <%= f.submit '次へ' %>
