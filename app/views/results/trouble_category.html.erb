@@ -2,14 +2,14 @@
   <h1 class='category-title'>悩みのカテゴリー</h1>
 </div>
 
-  <p class='is-size-1'>悩みのカテゴリーを選択してください</p>
-    <%= form_with model: @result, url: trouble_select_results_path, local: true do |f| %>
-      <div class='button-area p-6 has-text-centered'>
-        
-        <%= f.collection_radio_buttons :kind, Trouble.kinds_i18n, :first , :last do |b| %>
-          <%= b.label(class: "radio-label has-text-centered") { b.radio_button(class: "radio-button m-5") + b.text } %>
-        <% end %>
-        
-      </div>
-      <%= f.submit '次へ' %>
-    <% end %>
+<div class="container">
+  <p class='select-message'>悩みのカテゴリーを選択してください</p>
+  <%= form_with model: @result, url: trouble_select_results_path, local: true do |f| %>
+    <div class='button-area p-6 has-text-centered'>
+      <%= f.collection_radio_buttons :kind, Trouble.kinds_i18n, :first , :last do |b| %>
+        <%= b.label(class: "radio-label has-text-left") { b.radio_button(class: "radio-button m-5") + b.text } %>
+      <% end %>
+    </div>
+    <%= f.submit '次へ' %>
+  <% end %>
+</div>
