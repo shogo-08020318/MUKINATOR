@@ -5,11 +5,21 @@
 <div class="radio-buttons">
   <p class='select-message'>悩みのカテゴリーを選択してください</p>
   <%= form_with model: @result, url: trouble_select_results_path, local: true do |f| %>
-    <div class='button-area p-6 has-text-centered'>
+    <div class='button-area p-3 has-text-centered'>
       <%= f.collection_radio_buttons :kind, Trouble.kinds_i18n, :first , :last do |b| %>
-        <%= b.label(class: "radio-label has-text-left") { b.radio_button(class: "radio-button radio m-5") + b.text } %>
+        <%= b.label(class: "radio-label has-text-left mt-5 mb-5 p-5") { b.radio_button(class: "radio-button radio m-5") + b.text } %>
       <% end %>
     </div>
-    <%= f.submit '次へ' %>
+
+    <div class='p-6 column is-three-fifths is-offset-one-fifth'>
+      <div class="field is-grouped">
+        <div class="control">
+          <%= f.submit '次へ', class:'m-2 mt-6 custom-btn-14 btn-14 submit-button button' %>
+          <button class='m-2 mt-6 custom-btn-14 btn-14 submit-button button'>次へ</button>
+        </div>
+      </div>
+    </div>
   <% end %>
 </div>
+
+

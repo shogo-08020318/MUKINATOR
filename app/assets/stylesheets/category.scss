@@ -7,7 +7,10 @@
 }
 
 .radio-label {
-  font-size: 300%;
+  font-size: 350%;
+  width: 70%;
+  position: relative;
+  left: 15%;
 }
 
 .button-area {
@@ -15,202 +18,26 @@
   flex-flow: column;
 }
 
-.radio-label {
-  width: 50%;
-  position: relative;
-  left: 15%;
-}
-
-// ボタンの位置調整
-// .radio-button {
-//   position: relative;
-//   // background-color: red;
-//   // border-color: red;
-//   top: -8px;
-//   width: 40px;
-//   height: 40px;
-// }
-
-// input[type="radio"]:checked {
-//   border: 4px solid red;
-// }
-
-// input[type=radio] {
-//   opacity: 0;
-// }
-
-// .radio-label:before {
-//   content: "";
-//   position: absolute;
-//   top: 25%;
-//   display: block;
-//   border-radius: 50%;
-//   border: 5px solid #3a0169;
-//   background-color: rgb(231, 210, 255);
-//   width: 50px;
-//   height: 50px;
-// }
-
-// input[type=radio]:checked+.radio-label:after {
-//   // transform: scale(1);
-//   content: "";
-//   left: 10px;
-//   display: block;
-//   border-radius: 50%;
-//   width: 30px;
-//   height: 30px;
-//   background-color: #ff5;
-//   transform: scale(0);
-//   transition: transform .5s;
-//   opacity: 1;
-// }
-
-// input[type=radio]:checked+.radio-label:after {
-//   transform: scale(1);
-// }
-
-// input[type="radio"] {
-//   opacity: 0;
-//   &:checked + .radio-label::after {
-//     transform: scale(1); // ボタン選択時に内枠表示
-//   }
-// }
-
-// .radio-label:after {
-//   content: "";
-//   position: absolute;
-//   top: 40%;
-//   display: block;
-//   border-radius: 50%;
-//   border: 5px solid #11aa44;
-//   background-color: rgb(210, 242, 255);
-//   width: 30px;
-//   height: 30px;
-// }
-
-// .radio-label:after {
-//   content: "";
-//   left: 10px;
-//   display: block;
-//   border-radius: 50%;
-//   width: 30px;
-//   height: 30px;
-//   background-color: #ff5;
-//   transform: scale(0);
-//   transition: transform .5s;
-//   opacity: 1;
-// }
-
-// input[type="radio"]:checked {
-//   background-color: red;
-//   opacity: 1;
-//   box-shadow: 0 0 0 3px orange;
-// }
-
-// ボタンのデザイン
-
-// .radio-label {
-//   cursor: pointer;
-//   padding-left: 30px;
-//   position: relative;
-// }
-
-// .radio-label::before,
-// .radio-label::after {
-//   content: "";
-//   display: block;
-//   border-radius: 50%;
-//   position: absolute;
-//   transform: translateY(-50%);
-//   top: 50%;
-// }
-
-// .radio-label::before {
-//   background-color: #fff;
-//   border: 1px solid #008000;
-//   height: 20px;
-//   width: 20px;
-//   left: 5px;
-// }
-
-// .radio-label::after {
-//   background-color: #008000;
-//   opacity: 0;
-//   height: 16px;
-//   width: 16px;
-//   left: 7px;
-// }
-
-// input:checked + .radio-label::after {
-//   opacity: 1;
-// }
-
-
-
-// label.radio-label {
-// 	position      : relative;
-// 	// display       : inline-block;
-// 	width         : 15px;
-// 	height        : 15px;
-// 	border        : 1px solid #666;
-// 	border-radius : 100%;
-// 	overflow      : hidden;
-// 	cursor        : pointer;
-// }
-// label.radio-label:before {
-// 	content          : '';
-// 	display          : block;
-// 	width            : 11px;
-// 	height           : 11px;
-// 	border-radius    : 100%;
-// 	position         : absolute;
-// 	top              : 2px;
-// 	left             : 2px;
-// 	//z-index          : 1;
-// 	background-color : #fff; 
-// }
-// label.radio input[type="radio"] {
-// 	-moz-appearance: none;
-// 	-webkit-appearance: none;
-// 	margin     : 0px;
-// 	position   : absolute;
-// 	z-index    : 2;
-// 	top        : -2px;
-// 	left       : -23px;
-// 	width      : 20px;
-// 	height     : 20px;
-// 	display    : block;
-// 	box-shadow : 20px 0px #FFF;
-// }
-// // label.radio input[type="radio"]:checked {
-// // 	box-shadow : none;
-// // }
-// label.radio input[type="radio"]:focus {
-// 	box-shadow : 20px 0px #FFF;
-// 	opacity    : 0.2;
-// }
-
-
-
-
+// ボタンカスタマイズ
 .button-area {
 	width: 90%;
 	margin: 2em auto;
 	text-align: left;
 }
+
 // アニメーション
 @keyframes click-wave {
 	0% {
 		position: relative;
 		width: 30px;
 		height: 30px;
-		opacity: 0.35;
+		opacity: 0.5;
 	}
 	100% {
-		width: 200px;
-		height: 200px;
-		margin-top: -80px;
-		margin-left: -80px;
+		width: 400px;
+		height: 400px;
+		margin-top: -185px;
+		margin-left: -185px;
 		opacity: 0;
 	}
 }
@@ -234,10 +61,10 @@
 	        appearance: none;
 }
 .button-area .radio-button:hover {
-	background: #d6a9a9;
+	background: #ebceff;
 }
 .button-area .radio-button:checked {
-	background: #da3c41;
+	background: #8e3cda;
 }
 .button-area .radio-button:checked::before {
 	font-size: 20px;
@@ -253,14 +80,14 @@
 	position: relative;
 	display: block;
 	content: '';
-	-webkit-animation: click-wave 0.65s;
-	        animation: click-wave 0.65s;
-	background: #da3c41;
+	-webkit-animation: click-wave 1.0s;
+	        animation: click-wave 1.0s;
+  background: #ad3cda;
 }
 .button-area .radio-button.radio {
 	border-radius: 50%;
 }
-.cp_ipradio .radio-button.radio::after {
+.button-area .radio-button.radio::after {
 	border-radius: 50%;
 }
 .button-area label {
@@ -286,94 +113,60 @@
 }
 
 
+// 送信ボタン
+// .submit-button {
+//   margin: 20px;
+// }
 
-.cp_ipradio {
-	width: 90%;
-	margin: 2em auto;
-	text-align: left;
+.custom-btn-14 {
+  width: 150%;
+  height: 60%;
+  color: #fff;
+  border-radius: 5px;
+  padding: 10px 25px;
+  font-family: 'Reggae One', cursive,  sans-serif;
+  font-weight: 500;
+  font-size: 200%;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+   box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+   7px 7px 20px 0px rgba(0,0,0,.1),
+   4px 4px 5px 0px rgba(0,0,0,.1);
+  outline: none;
 }
-@keyframes click-wave {
-	0% {
-		position: relative;
-		width: 30px;
-		height: 30px;
-		opacity: 0.35;
-	}
-	100% {
-		width: 200px;
-		height: 200px;
-		margin-top: -80px;
-		margin-left: -80px;
-		opacity: 0;
-	}
+
+.btn-14 {
+  background: rgb(255,151,0);
+  border: none;
+  z-index: 1;
 }
-.cp_ipradio .option-input {
-	position: relative;
-	position: relative;
-	top: 13.33333px;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	width: 30px;
-	height: 30px;
-	margin-right: 0.5rem;
-	cursor: pointer;
-	transition: all 0.15s ease-out 0s;
-	color: #ffffff;
-	border: none;
-	outline: none;
-	background: #d7cbcb;
-	-webkit-appearance: none;
-	        appearance: none;
+.btn-14:after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 0;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  border-radius: 5px;
+  background-color: #eaf818;
+  background-image: linear-gradient(315deg, #eaf818 0%, #f6fc9c 74%);
+   box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+   7px 7px 20px 0px rgba(0,0,0,.1),
+   4px 4px 5px 0px rgba(0,0,0,.1);
+  transition: all 0.25s ease;
 }
-.cp_ipradio .option-input:hover {
-	background: #d6a9a9;
+.btn-14:hover {
+  color: #000;
 }
-.cp_ipradio .option-input:checked {
-	background: #da3c41;
+.btn-14:hover:after {
+  top: auto;
+  bottom: 0;
+  height: 100%;
 }
-.cp_ipradio .option-input:checked::before {
-	font-size: 20px;
-	line-height: 30px;
-	position: absolute;
-	display: inline-block;
-	width: 30px;
-	height: 30px;
-	content: '';
-	text-align: center;
-}
-.cp_ipradio .option-input:checked::after {
-	position: relative;
-	display: block;
-	content: '';
-	-webkit-animation: click-wave 0.65s;
-	        animation: click-wave 0.65s;
-	background: #da3c41;
-}
-.cp_ipradio .option-input.radio {
-	border-radius: 50%;
-}
-.cp_ipradio .option-input.radio::after {
-	border-radius: 50%;
-}
-.cp_ipradio label {
-	line-height: 40px;
-	display: block;
-}
-.cp_ipradio .option-input:disabled {
-	cursor: not-allowed;
-	background: #b8b7b7;
-}
-.cp_ipradio .option-input:disabled::before {
-	font-size: 20px;
-	line-height: 30px;
-	position: absolute;
-	display: inline-block;
-	width: 30px;
-	height: 30px;
-	content: '✖︎';
-	text-align: center;
-}
-.cp_ipradio .disabled {
-	color: #9e9e9e;
+.btn-14:active {
+  top: 2px;
 }
