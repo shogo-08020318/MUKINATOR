@@ -118,7 +118,7 @@
 //   margin: 20px;
 // }
 
-.custom-btn-14 {
+.custom-btn-2 {
   width: 150%;
   height: 60%;
   color: #fff;
@@ -138,35 +138,55 @@
   outline: none;
 }
 
-.btn-14 {
-  background: rgb(255,151,0);
+.btn-2 {
+  background: rgb(96,9,240);
+  background: linear-gradient(0deg, rgba(96,9,240,1) 0%, rgba(129,5,240,1) 100%);
   border: none;
-  z-index: 1;
+  
 }
-.btn-14:after {
-  position: absolute;
-  content: "";
-  width: 100%;
-  height: 0;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  border-radius: 5px;
-  background-color: #eaf818;
-  background-image: linear-gradient(315deg, #eaf818 0%, #f6fc9c 74%);
-   box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
-   7px 7px 20px 0px rgba(0,0,0,.1),
-   4px 4px 5px 0px rgba(0,0,0,.1);
-  transition: all 0.25s ease;
+.btn-2:before {
+  height: 0%;
+  width: 2px;
 }
-.btn-14:hover {
-  color: #000;
+.btn-2:hover {
+  box-shadow:  4px 4px 6px 0 rgba(255,255,255,.5),
+              -4px -4px 6px 0 rgba(116, 125, 136, .5), 
+    inset -4px -4px 6px 0 rgba(255,255,255,.2),
+    inset 4px 4px 6px 0 rgba(0, 0, 0, .4);
+    color: #fff;
+    background: rgb(149, 117, 200);
+    background: linear-gradient(0deg, rgb(122, 3, 133) 0%, rgb(107, 3, 60) 100%);
 }
-.btn-14:hover:after {
-  top: auto;
-  bottom: 0;
-  height: 100%;
-}
-.btn-14:active {
-  top: 2px;
-}
+
+// .btn-14 {
+//   background: rgb(255,151,0);
+//   border: none;
+//   z-index: 1;
+// }
+// .btn-14:after {
+//   position: absolute;
+//   content: "";
+//   width: 100%;
+//   height: 0;
+//   top: 0;
+//   left: 0;
+//   z-index: -1;
+//   border-radius: 5px;
+//   background-color: #eaf818;
+//   background-image: linear-gradient(315deg, #eaf818 0%, #f6fc9c 74%);
+//    box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+//    7px 7px 20px 0px rgba(0,0,0,.1),
+//    4px 4px 5px 0px rgba(0,0,0,.1);
+//   transition: all 0.25s ease;
+// }
+// .btn-14:hover {
+//   color: #000;
+// }
+// .btn-14:hover:after {
+//   top: auto;
+//   bottom: 0;
+//   height: 100%;
+// }
+// .btn-14:active {
+//   top: 2px;
+// }
