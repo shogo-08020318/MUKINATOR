@@ -1,4 +1,6 @@
-<h1>result.html.erb</h1>
+<div class="p-6">
+  <h1 class='result-title'>解決策</h1>
+</div>
 <!--
  筋トレ名言 
 <div id="loader-bg">
@@ -19,6 +21,7 @@
 </div>
 -->
 
+<!-- ローディングページ -->
 <div id="loading">
   <div id="loader">
     <%= render 'results/wise_sayings' %>
@@ -27,26 +30,36 @@
   </div>
 </div>
 
+<!-- 解決策ページ -->
 <div id="wrap">
   <div id='resut_wrapper' class='result' >
-    <%= @result.name %>のお悩みは、<br>
-    <p><%= @result.reason.trouble.name %></p>
+    <%= @result.name %>さんのお悩みは、<br>
+    <p class='trouble-name'><%= @result.reason.trouble.name %></p>
     <p>解決方法は、</p>
-    <h1>筋トレ</h1>
+    <h1 class='solution'>筋トレ</h1>
     <p><%=@result.reason.name%></p>
     <h4>単純さ。揺れるものは全て脂肪だ。</h4>
     <h5>アーノルド・シュワルツェネッガー</h5>
   </div>
 </div>
 
-<p><%= @video[0].title %></p>
-<%= content_tag 'iframe', nil, width: 500, height: 300, src: "#{@video[0].video}", \
-    frameborder: 0, gesture: 'media', allow: 'encrypted-media', allowfullscreen: true %>
+<!-- YouTube動画表示エリア -->
+<div class="youtube-videos">
+  <div class="youtube-video">
+    <p class='video-title'><%= @video[0].title %></p>
+    <%= content_tag 'iframe', nil, width: 500, height: 300, src: "#{@video[0].video}", \
+        frameborder: 0, gesture: 'media', allow: 'encrypted-media', allowfullscreen: true %>
+  </div>
 
-<p><%= @video[1].title %></p>
-<%= content_tag 'iframe', nil, width: 500, height: 300, src: "#{@video[1].video}", \
-    frameborder: 0, gesture: 'media', allow: 'encrypted-media', allowfullscreen: true %>
+  <div class="youtube-video">
+    <p class='video-title'><%= @video[1].title %></p>
+    <%= content_tag 'iframe', nil, width: 500, height: 300, src: "#{@video[1].video}", \
+        frameborder: 0, gesture: 'media', allow: 'encrypted-media', allowfullscreen: true %>
+  </div>
 
-<p><%= @video[2].title %></p>
-<%= content_tag 'iframe', nil, width: 500, height: 300, src: "#{@video[2].video}", \
-    frameborder: 0, gesture: 'media', allow: 'encrypted-media', allowfullscreen: true %>
+  <div class="youtube-video">
+    <p class='video-title'><%= @video[2].title %></p>
+    <%= content_tag 'iframe', nil, width: 500, height: 300, src: "#{@video[2].video}", \
+        frameborder: 0, gesture: 'media', allow: 'encrypted-media', allowfullscreen: true %>
+  </div>
+</div>
