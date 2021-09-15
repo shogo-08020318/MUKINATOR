@@ -38,16 +38,16 @@
     <p>解決方法は、</p>
     <h1 class='solution'>筋トレ</h1>
     <p class='reason-name'><%=@result.reason.name%></p>
-    <div class="result-wise_saying">
-      <p>筋トレ名言</p>
-      <h4>単純さ。揺れるものは全て脂肪だ。</h4>
-      <h5>アーノルド・シュワルツェネッガー</h5>
+    <div class="wise-saying-area pt-6">
+      <p class='wise-saying-label'>筋トレ名言</p>
+      <p class='wise-saying'>単純さ。揺れるものは全て脂肪だ。</p>
+      <p class='syawing-person'>アーノルド・シュワルツェネッガー</p>
     </div>
   </div>
 </div>
 
 <!-- YouTube動画表示エリア -->
-<div class="youtube-videos">
+<div class="youtube-videos p-6">
   <div class="youtube-video p-3">
     <p class='video-title pb-2'><%= @video[0].title %></p>
     <%= content_tag 'iframe', nil, width: 400, height: 240, src: "#{@video[0].video}", \
