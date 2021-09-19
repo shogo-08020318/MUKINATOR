@@ -1,7 +1,24 @@
-<h1>trouble_category.html.erb</h1>
-<%= form_with model: @result, url: trouble_select_results_path, local: true do |f| %>
-  <%= f.label '悩みのカテゴリー' %>
-  <%= f.collection_radio_buttons :kind, Trouble.kinds_i18n, :first , :last %>
-  
-  <%= f.submit '次へ' %>
-<% end %>
+<div class="p-6">
+  <h1 class='category-title'>悩みのカテゴリー</h1>
+</div>
+
+<div class="radio-buttons">
+  <p class='select-message'>悩みのカテゴリーを選択してください</p>
+  <%= form_with model: @result, url: trouble_select_results_path, local: true do |f| %>
+    <div class='button-area p-3 has-text-centered'>
+      <%= f.collection_radio_buttons :kind, Trouble.kinds_i18n, :first , :last do |b| %>
+        <%= b.label(class: "radio-label has-text-left mt-5 mb-5 p-5") { b.radio_button(class: "radio-button radio m-5") + b.text } %>
+      <% end %>
+    </div>
+
+    <div class='p-3 column is-three-fifths is-offset-one-fifth'>
+      <div class="field is-grouped">
+        <div class="control">
+          <%= f.submit '次へ', class:'mt-6 custom-btn-2 btn-2 submit-button button' %>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>
+
+
