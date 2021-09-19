@@ -41,6 +41,7 @@
 		opacity: 0;
 	}
 }
+
 .button-area .radio-button {
 	position: relative;
 	position: relative;
@@ -60,12 +61,15 @@
 	-webkit-appearance: none;
 	        appearance: none;
 }
+
 .button-area .radio-button:hover {
 	background: #ebceff;
 }
+
 .button-area .radio-button:checked {
 	background: #8e3cda;
 }
+
 .button-area .radio-button:checked::before {
 	font-size: 20px;
 	line-height: 30px;
@@ -76,6 +80,7 @@
 	content: '';
 	text-align: center;
 }
+
 .button-area .radio-button:checked::after {
 	position: relative;
 	display: block;
@@ -84,20 +89,25 @@
 	        animation: click-wave 1.0s;
   background: #ad3cda;
 }
+
 .button-area .radio-button.radio {
 	border-radius: 50%;
 }
+
 .button-area .radio-button.radio::after {
 	border-radius: 50%;
 }
+
 .button-area label {
 	line-height: 40px;
 	display: block;
 }
+
 .button-area .radio-button:disabled {
 	cursor: not-allowed;
 	background: #b8b7b7;
 }
+
 .button-area .radio-button:disabled::before {
 	font-size: 20px;
 	line-height: 30px;
@@ -108,11 +118,12 @@
 	content: '✖︎';
 	text-align: center;
 }
+
 .button-area .disabled {
 	color: #9e9e9e;
 }
 
-
+// TODO: ボタンのデザインを変更する可能性があるため残す リリース前に削除
 // 送信ボタン
 // .submit-button {
 //   margin: 20px;
@@ -142,12 +153,13 @@
   background: rgb(96,9,240);
   background: linear-gradient(0deg, rgba(96,9,240,1) 0%, rgba(129,5,240,1) 100%);
   border: none;
-  
 }
+
 .btn-2:before {
   height: 0%;
   width: 2px;
 }
+
 .btn-2:hover {
   box-shadow:  4px 4px 6px 0 rgba(255,255,255,.5),
               -4px -4px 6px 0 rgba(116, 125, 136, .5), 
@@ -158,6 +170,7 @@
     background: linear-gradient(0deg, rgb(122, 3, 133) 0%, rgb(107, 3, 60) 100%);
 }
 
+// TODO: ボタンのデザインを変更する可能性があるため残す リリース前に削除
 // .btn-14 {
 //   background: rgb(255,151,0);
 //   border: none;

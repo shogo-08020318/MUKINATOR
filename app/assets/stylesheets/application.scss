@@ -17,6 +17,7 @@
 // bulma
 @import "bulma";
 
+// SCSS
 @import 'top';
 @import 'nickname';
 @import 'category';
@@ -24,7 +25,7 @@
 @import 'wise_sayings';
 @import 'result';
 
-// 全てのテキストに適用
+// 全てのbodyに適用
 body {
   top: 100px;
   text-align: center;

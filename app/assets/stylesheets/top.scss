@@ -10,6 +10,7 @@
 html {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
+  // TODO: ボタンのデザインを変更する可能性があるため残す リリース前に削除
   // 変更
   // font-size: 62.5%;
 }
@@ -43,7 +44,6 @@ a.top-btn-gradient {
   font-weight: normal;
   // 変更
   width: 70%;
-
   color: #fff;
   border-radius: 0;
   background-image: -webkit-gradient(
@@ -55,6 +55,7 @@ a.top-btn-gradient {
   );
   background-image: -webkit-linear-gradient(left, #ff3cac, #562b7c, #2b86c5);
   background-image: linear-gradient(90deg, #ff3cac, #562b7c, #2b86c5);
+  // TODO: ボタンのデザインを変更する可能性があるため残す リリース前に削除
   // background-image: -webkit-linear-gradient(left, #ff3cac 40%, #562b7c 100%);
   // background-image: linear-gradient(90deg, #ff3cac 40%, #562b7c 100%);
 }
@@ -81,10 +82,10 @@ a.top-btn-gradient:after {
   );
 
   background-image: -webkit-linear-gradient(left, #8f0051, #562b7c, #003d69);
-
   background-image: linear-gradient(90deg, #8f0051, #562b7c, #003b69);
-  // background-image: -webkit-linear-gradient(left, #ff3cac, #562b7c, #2b86c5);
 
+  // TODO: ボタンのデザインを変更する可能性があるため残す リリース前に削除
+  // background-image: -webkit-linear-gradient(left, #ff3cac, #562b7c, #2b86c5);
   // background-image: linear-gradient(90deg, #ff3cac, #562b7c, #2b86c5);
 }
 
