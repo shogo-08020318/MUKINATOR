@@ -7,9 +7,9 @@ class ResultsController < ApplicationController
 
   def trouble_category
     # ニックネームと性別をセッションに一時保持
-    if params[:nickname].present?
-      session[:nickname] = params[:nickname]
-    # session[:gender] = params[:result][:gender]
+    # if params[:nickname].present?
+    if params[:result][:nickname].present?
+      session[:nickname] = params[:result][:nickname]
     # 悩みのカテゴリー選択ページ
       render 'results/trouble_category'
     else
