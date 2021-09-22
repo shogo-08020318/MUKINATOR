@@ -44,6 +44,7 @@ class ResultsController < ApplicationController
       @video[0] = Exercise.where(category: 'man').sample
       @video[1] = Exercise.where(category: 'woman').sample
       @video[2] = Exercise.where(category: 'other').sample
+      @word = WiseSaying.all.sample
       render 'results/result'
     else
       # ここで再度悩みを取得しないと、レンダリング先で@troublesがnilになる
