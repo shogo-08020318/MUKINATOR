@@ -7,9 +7,10 @@ class ResultsController < ApplicationController
 
   def trouble_category
     # ニックネームと性別をセッションに一時保持
-    if params[:nickname].present?
-      session[:nickname] = params[:nickname]
-    # session[:gender] = params[:result][:gender]
+    # if params[:nickname].present?
+    @result = Result.new(nickname_params)
+    if params[:result][:nickname].present?
+      session[:nickname] = params[:result][:nickname]
     # 悩みのカテゴリー選択ページ
       render 'results/trouble_category'
     else
@@ -52,6 +53,10 @@ class ResultsController < ApplicationController
   end
 
   private
+
+  def nickname_params
+    params.require(:result).permit(:name)
+  end
 
   # ストロングパラメータで受け取る値を制限する
   def result_params

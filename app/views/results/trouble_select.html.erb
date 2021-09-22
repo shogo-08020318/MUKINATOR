@@ -4,7 +4,7 @@
 
 <div class="radio-buttons">
   <p class='trouble-message'>悩みを選択してください</p>
-  <%= form_with model: @result, url: results_path, local: true do |f| %>
+  <%= form_with url: results_path, local: true do |f| %>
     <div class='p-6'>
       <% @troubles.each do |trouble| %>
         <div class='p-5 m-5'>
