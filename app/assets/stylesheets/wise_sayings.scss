@@ -39,7 +39,10 @@
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-color: #484848;
+  // background-color: #484848;
+  // background-color: #a2a3f8;
+  // background: radial-gradient( circle 1000px at center, #000 50%, #671d92 90% );
+  background: radial-gradient( circle 1000px at center, #671d92 10%, #000 90% );
   z-index: 9000;
 }
 
@@ -59,6 +62,11 @@
 
 p{
   margin-bottom: 0;
+}
+
+.loading-area {
+  position: relative;
+  top: 15%;
 }
 
 .loading-title {
