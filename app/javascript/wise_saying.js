@@ -1,39 +1,49 @@
 // $(function() {
-//   var h = $(window).height();
-  
+//   let h = $(window).height();
+
 //   $('#wrap').css('display','none');
-//   $('#loader-bg ,#loader').height(h).css('display','block');
+//   $('#loading ,#loader').height(h).css('display','block');
 // });
   
 // $(window).load(function () { //全ての読み込みが完了したら実行
-//   $('#loader-bg').delay(900).fadeOut(800);
+//   $('#loading').delay(900).fadeOut(800);
 //   $('#loader').delay(600).fadeOut(300);
 //   $('#wrap').css('display', 'block');
 // });
-  
-// //10秒たったら強制的にロード画面を非表示
+
+// // //10秒たったら強制的にロード画面を非表示
 // $(function(){
-//   setTimeout('stopload()',3000);
-// });
-  
+//   setTimeout('stopload()', 10000);
+// })
+
+// function stopload(){
+//   $('#loading').delay(900).fadeOut(1000);
+//   console.log("3秒経過");
+// }
+
 // function stopload(){
 //   $('#wrap').css('display','block');
-//   $('#loader-bg').delay(900).fadeOut(800);
+//   $('#loading').delay(900).fadeOut(800);
 //   $('#loader').delay(600).fadeOut(300);
 // }
 
 'use strict';
 
-$(window).on('load', function(){
-  $('#loading').delay(900).fadeOut(1000);
-  console.log("ローディング完了");
+// $(window).on('load', function(){
+//   $('#loading').delay(5000).fadeOut(1000);
+//   console.log("ローディング完了");
+// });
+
+$(document).ready(function() {
+  $('.loading-wise-saying, .loading-person').delay(3000).fadeIn(1500);
+  $('#loading').delay(8000).fadeOut(1500);
 });
 
-// $(function(){
-//   setTimeout('stopload()', 10000);
-// })
-
-function stopload(){
-  $('#loading').delay(900).fadeOut(1000);
-  console.log("3秒経過");
-}
+// $(document).ready(function() {
+//   console.log('筋トレ名言');
+//   let saying = $('.loading-wise-saying');
+//   let person = $('.loading-person');
+//   saying.delay(1000).removeClass('is-hide');
+//   person.delay(1500).removeClass('is-hide');
+//   $('#loading').delay(5000).fadeOut(1500);
+// });

@@ -1,7 +1,7 @@
 <div id= 'loading-area', class='loading-area pt-6 mt-6' >
   <p class='loading-title p-6'>筋トレ名言</p>
-  <p class='loading-wise-saying'><%= @word.name %></p>
-  <p class='loading-person'><%= @word.people %></p>
   <%= image_tag 'img-loading.gif', width: "80", height:"80", alt:"Now Loading..." %>
   <p class='loading-mesaage'>解決策考案中...</p>
+  <p class='loading-wise-saying is-hide'><%= @word.name %></p>
+  <p class='loading-person is-hide'><%= @word.people %></p>
 </div>
