@@ -1,29 +1,10 @@
 <div class="p-6">
   <h1 class='result-title'>解決策</h1>
 </div>
-<!--
- 筋トレ名言 
-<div id="loader-bg">
-  <div id="loader">
-    <%= render 'results/wise_sayings' %>
-  </div>
-</div>
-
- 解決策 
-<div id="wrap">
-  <div id='resut_wrapper' class='result' >
-    <%= @result.name %>のお悩みは、<br>
-    <p><%= @result.reason.trouble.name %></p>
-    <p>解決方法は、</p>
-    <h1>筋トレです</h1>
-    <p><%=@result.reason.name%></p>
-  </div>
-</div>
--->
 
 <!-- ローディングページ -->
 <div id="loading">
-  <%= render 'wise_sayings' %>
+  <%= render 'wise_sayings', word: @word %>
 </div>
 
 <!-- 解決策ページ -->
@@ -48,19 +29,16 @@
 <!-- YouTube動画表示エリア -->
 <div class="youtube-videos p-6">
   <div class="youtube-video p-5">
-    <!--<p class='video-title pb-2'><%= @video[0].title %></p>-->
     <%= content_tag 'iframe', nil, width: 500, height: 300, src: "#{@video[0].video}", \
         frameborder: 0, gesture: 'media', allow: 'encrypted-media', allowfullscreen: true %>
   </div>
 
   <div class="youtube-video p-5">
-    <!--<p class='video-title pb-2'><%= @video[1].title %></p>-->
     <%= content_tag 'iframe', nil, width: 500, height: 300, src: "#{@video[1].video}", \
         frameborder: 0, gesture: 'media', allow: 'encrypted-media', allowfullscreen: true %>
   </div>
 
   <div class="youtube-video p-5">
-    <!--<p class='video-title pb-2'><%= @video[2].title %></p>-->
     <%= content_tag 'iframe', nil, width: 500, height: 300, src: "#{@video[2].video}", \
         frameborder: 0, gesture: 'media', allow: 'encrypted-media', allowfullscreen: true %>
   </div>
