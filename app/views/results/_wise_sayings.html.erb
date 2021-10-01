@@ -1,5 +1,11 @@
-<div id= 'test', class='red' >
-  <p class='loading-title p-6'>筋トレ名言</p>
-  <p class='loading-wise-saying'><%= @word.name %></p>
-  <p class='loading-person'><%= @word.people %></p>
+<div id="loader">
+  <div id= 'loading-area', class='loading-area pt-6 mt-6' >
+    <p class='loading-title p-6'>筋トレ名言</p>
+    <p class='loading-wise-saying is-hide p-6'><%= word.name %></p>
+    <p class='loading-person is-hide'><%= word.people %></p>
+  </div>
+  <div class="sink-area">
+    <p class="rotation"></p>
+    <p class='loading-mesaage pt-6'>解決策考案中...</p>
+  </div>
 </div>
