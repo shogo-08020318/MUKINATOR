@@ -11,17 +11,19 @@
     <p class='top-message'>あなたの悩み、<br>全て筋トレで解決します！</p>
   </section>
 
-  <!-- ニックネーム、性別選択ページに遷移 -->
-  <%= link_to new_result_path, method: :get, class: 'top-btn top-btn-gradient m-6' do %>
-    <span><%= "相談を始める" %></span>
-  <% end %>
+  <!-- ニックネーム入力ページに遷移-->
+  <div class="m-6">
+    <%= link_to new_result_path, method: :get, class: 'custom-btn btn-1 submit-button button top-btn' do %>
+      <span><%= "相談を始める" %></span>
+    <% end %>
+  </div>
 
   <div class="columns is-gapless is-multiline is-mobile is-justify-content-center">
-    <div class="column is-one-quarter has-text-right">
-      <p class='is-size-3 mr-2'>お問い合わせ</p>
+    <div class="column is-one-quarter has-text-centered">
+      <p class='is-size-3'>お問い合わせ</p>
     </div>
-    <div class="column is-one-quarter has-text-left">
-      <p class='is-size-3 ml-2'>利用規約</p>
+    <div class="column is-one-quarter has-text-centered">
+      <p class='is-size-3'>利用規約</p>
     </div>
   </div>
 </div>
