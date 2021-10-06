@@ -1,0 +1,90 @@
+// =========================
+//          ヘッダー
+// =========================
+.navbar {
+  background: linear-gradient(rgb(103, 0, 187), #000);
+}
+
+.navbar-color {
+  background: rgb(103, 0, 187);
+}
+
+.navbar-brand .navbar-item {
+  min-width: 10rem;
+}
+
+.navbar-item img {
+  min-height: 9rem;
+}
+
+// メニュー
+.navbar-menu a {
+  color: #fff;
+  font-size: 2rem;
+}
+
+.navbar-end .navbar-item:hover {
+  background: linear-gradient(rgb(149, 51, 230), #000);
+  color: #fff;
+}
+
+.navbar-end .navbar-item:active {
+  background: linear-gradient(rgb(149, 51, 230), #000);
+  color: #fff;
+}
+
+// ハンバーガーメニューボタン
+.navbar-burger {
+  min-height: 9rem;
+  width: 9.5rem;
+  height: 10rem;
+}
+
+// ボタンの色
+.navbar-burger span {
+  color: #fff;
+  height: 5px;
+  width: 40px;
+  left: calc(10% + 45px);
+}
+
+// ボタンの背景
+.navbar-burger:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+  width: 150px;
+  height: 10rem;
+}
+
+// ボタンの位置調整
+.navbar-burger span:nth-child(2) {
+  top: calc(50% + 9px);
+}
+
+.navbar-burger span:nth-child(3) {
+  top: calc(50% + 25px);
+}
+
+.navbar-burger.is-active span:nth-child(1) {
+  transform: translateY(16px) rotate(45deg);
+}
+
+.navbar-burger.is-active span:nth-child(3) {
+  transform: translateY(-15px) rotate(-45deg);
+}
+
+// メニュー展開時の背景
+.navbar-menu.is-active {
+  background: linear-gradient(rgb(103, 0, 187), #000);
+}
+
+// メニュー展開時の背景を変更
+.navbar-menu .navbar-burger-menu:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+// =========================
+//          フッター
+// =========================
+.footer {
+  background: linear-gradient(#000, rgb(103, 0, 187));
+}
