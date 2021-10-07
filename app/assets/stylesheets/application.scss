@@ -36,3 +36,8 @@ body {
   color: #fff;
   background-color: #000;
 }
+
+// bodyの高さが足りないので追加
+main {
+  min-height: 1780px;
+}
