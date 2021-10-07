@@ -1,24 +1,28 @@
-<div class="p-6">
-  <h1 class='category-title'>悩みのカテゴリー</h1>
-</div>
+<main>
+  <div class="p-6">
+    <h1 class='category-title'>悩みのカテゴリー</h1>
+  </div>
 
-<div class="radio-buttons">
-  <p class='select-message'>悩みのカテゴリーを選択してください</p>
-  <%= form_with url: trouble_select_results_path, local: true do |f| %>
-    <div class='button-area p-3 has-text-centered'>
-      <%= f.collection_radio_buttons :kind, Trouble.kinds_i18n, :first , :last do |b| %>
-        <%= b.label(class: "radio-label has-text-left mt-5 mb-5 p-5") { b.radio_button(class: "radio-button radio m-5") + b.text } %>
-      <% end %>
-    </div>
+  <div class="radio-buttons">
+    <p class='select-message'>悩みのカテゴリーを選択してください</p>
+    <%= form_with url: trouble_select_results_path, local: true do |f| %>
+      <div class='button-area ml-6 mt-3 p-3 has-text-centered'>
+        <%= f.collection_radio_buttons :kind, Trouble.kinds_i18n, :first , :last do |b| %>
+          <%= b.label(class: "radio-label has-text-left mt-3 mb-3 p-3") { b.radio_button(class: "radio-button radio m-5") + b.text } %>
+        <% end %>
+      </div>
 
-    <div class='p-3 column is-three-fifths is-offset-one-fifth'>
-      <div class="field is-grouped">
-        <div class="control">
-          <%= f.submit '次へ', class:'mt-6 custom-btn btn-1 submit-button button' %>
+      <div class='column is-8 is-offset-2 pt-6 pb-6'>
+        <%= image_tag 'category_img'%>
+      </div>
+
+      <div class='p-3'>
+        <div class="field is-grouped is-grouped-centered">
+          <div class="control">
+            <%= f.submit '次へ', class:'mt-6 mb-4 custom-btn btn-1 button' %>
+          </div>
         </div>
       </div>
-    </div>
-  <% end %>
-</div>
-
-
+    <% end %>
+  </div>
+</main>
