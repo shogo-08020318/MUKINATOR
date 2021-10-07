@@ -3,8 +3,8 @@
 }
 
 .custom-btn {
-  width: 150%;
-  height: 60%;
+  width: 100%;
+  height: 70%;
   color: #fff;
   border-radius: 5px;
   padding: 10px 25px;
@@ -31,5 +31,9 @@
 .btn-1:hover {
   color: #fff;
   background: rgb(119, 0, 255);
-  background: linear-gradient(0deg, rgb(98, 0, 255) 0%, rgb(222, 2, 251) 100%);
+  background: linear-gradient(0deg, rgb(98, 0, 255) 0%, rgb(153, 0, 255) 100%);
+}
+
+.field.is-grouped > .control {
+  width: 17.5rem;
 }

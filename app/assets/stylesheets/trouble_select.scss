@@ -1,29 +1,24 @@
 .trouble-title {
-  font-size: 400%;
+  font-size: 5rem;
 }
 
 .trouble-message {
-  font-size: 350%;
+  font-size: 4rem;
 }
 
 .trouble-label {
-  font-size: 300%;
+  font-size: 4rem;
 }
 
 // ラジオボタンの配置
 .trouble-button-area {
   display:flex;
-  // flex-flow: column;
-  position: relative;
-  left: 10%;
 }
 
 // ボタンカスタマイズ
 .trouble-trouble-button-area {
 	width: 90%;
   margin: 2em auto;
-  // TODO: ボタンのデザインを変更する可能性があるため残す リリース前に削除
-	// text-align: left;
 }
 
 // アニメーション

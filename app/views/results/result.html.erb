@@ -1,45 +1,53 @@
-<div class="p-6">
-  <h1 class='result-title'>解決策</h1>
-</div>
+<main>
+  <div class="p-6">
+    <h1 class='result-title'>解決策</h1>
+  </div>
 
-<!-- ローディングページ -->
-<div id="loading">
-  <%= render 'wise_sayings', word: @word %>
-</div>
+  <!-- ローディングページ -->
+  <div id="loading">
+    <%= render 'wise_sayings', word: @word %>
+  </div>
 
-<!-- 解決策ページ -->
-<div id="wrap">
-  <div id='resut_wrapper' class='result' >
-    <div class="trouble-area">
-      <p class='result-name' id='result-name'><%= @result.name %>さんのお悩みは、</p>
-      <p class='trouble-name' id='trouble-name'><%= @result.reason.trouble.name %></p>
-      <p class='result-text pt-3'>解決方法は、</p>
-      <p class='solution' id='solution'>筋トレ</p>
-      <p class='result-reason'><%=@result.reason.name%></p>
+  <!-- 解決策ページ -->
+  <div id="wrap">
+    <div id='resut_wrapper' class='result is-size-1' >
+      <div class="trouble-area">
+        <p class='result-name' id='result-name'><%= @result.name %>さんのお悩みは、</p>
+        <p class='trouble-name' id='trouble-name'>「<%= @result.reason.trouble.name %>」</p>
+        <div class="reason-area p-4">
+          <p class='result-text pt-3'>解決方法は、</p>
+          <p class='solution' id='solution'>筋トレ</p>
+          <p class='result-reason is-size-1'><%=@result.reason.name%></p>
+        </div>
+      </div>
+
+      <div class='column is-8 is-offset-2 pt-6 pb-6'>
+        <%= image_tag 'result_img'%>
+      </div>
+
+      <div class="wise-saying-area pt-6">
+        <p class='wise-saying-label'>筋トレ名言</p>
+        <p class='wise-saying pl-2 pr-2' id='wise-saying'><%= @word.name %></p>
+        <p class='syawing-person is-size-1' id='syawing-person'><%= @word.people %></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- YouTube動画表示エリア -->
+  <div class="youtube-videos p-6">
+    <div class="youtube-video p-5">
+      <%= content_tag 'iframe', nil, width: 500, height: 300, src: "#{@video[0].video}", \
+          frameborder: 0, gesture: 'media', allow: 'encrypted-media', allowfullscreen: true %>
     </div>
 
-    <div class="wise-saying-area pt-6">
-      <p class='wise-saying-label'>筋トレ名言</p>
-      <p class='wise-saying pl-2 pr-2' id='wise-saying'><%= @word.name %></p>
-      <p class='syawing-person' id='syawing-person'><%= @word.people %></p>
+    <div class="youtube-video p-5">
+      <%= content_tag 'iframe', nil, width: 500, height: 300, src: "#{@video[1].video}", \
+          frameborder: 0, gesture: 'media', allow: 'encrypted-media', allowfullscreen: true %>
+    </div>
+
+    <div class="youtube-video p-5">
+      <%= content_tag 'iframe', nil, width: 500, height: 300, src: "#{@video[2].video}", \
+          frameborder: 0, gesture: 'media', allow: 'encrypted-media', allowfullscreen: true %>
     </div>
   </div>
-</div>
-
-<!-- YouTube動画表示エリア -->
-<div class="youtube-videos p-6">
-  <div class="youtube-video p-5">
-    <%= content_tag 'iframe', nil, width: 500, height: 300, src: "#{@video[0].video}", \
-        frameborder: 0, gesture: 'media', allow: 'encrypted-media', allowfullscreen: true %>
-  </div>
-
-  <div class="youtube-video p-5">
-    <%= content_tag 'iframe', nil, width: 500, height: 300, src: "#{@video[1].video}", \
-        frameborder: 0, gesture: 'media', allow: 'encrypted-media', allowfullscreen: true %>
-  </div>
-
-  <div class="youtube-video p-5">
-    <%= content_tag 'iframe', nil, width: 500, height: 300, src: "#{@video[2].video}", \
-        frameborder: 0, gesture: 'media', allow: 'encrypted-media', allowfullscreen: true %>
-  </div>
-</div>
+</main>
