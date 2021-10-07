@@ -1,28 +1,31 @@
-<div class="p-6">
-  <h1 class='trouble-title'>悩み選択</h1>
-</div>
+<main>
+  <div class="p-6">
+    <h1 class='trouble-title'>悩み選択</h1>
+  </div>
 
-<div class="radio-buttons">
-  <p class='trouble-message'>悩みを選択してください</p>
-  <%= form_with url: results_path, local: true do |f| %>
-    <div class='p-6'>
-      <% @troubles.each do |trouble| %>
-        <div class='p-5 m-5'>
-          <div class='trouble-button-area'>
-            <%= f.radio_button :trouble_id, trouble.id, class:'radio-button radio trouble-button button mb-4 mt-4' %>
-            <%= f.label :trouble_id, trouble.name, value: trouble.id, class:'trouble-label has-text-left ml-2 pl-2 mb-4 mt-4' %>
+  <div class="radio-buttons">
+    <p class='trouble-message'>悩みを選択してください</p>
+    <%= form_with url: results_path, local: true do |f| %>
+      <div class='p-6'>
+        <% @troubles.each do |trouble| %>
+          <div class='columns p-3 m-3'>
+            <div class='trouble-button-area column is-11 is-offset-1'>
+              <%= f.radio_button :trouble_id, trouble.id, class:'radio-button radio trouble-button button mb-4 mt-4' %>
+              <%= f.label :trouble_id, trouble.name, value: trouble.id, class:'trouble-label has-text-left ml-2 pl-2 mb-4 mt-4' %>
+            </div>
+          </div>
+        <% end %>
+      </div>
+      <div class='pb-3'>
+        <div class="field is-grouped is-grouped-centered">
+          <div class="control">
+            <%= f.submit '解決策を見る', class:'mt-6 custom-btn btn-1 submit-button button btn-width' %>
           </div>
         </div>
-      <% end %>
-    </div>
-
-    <div class='p-3 column is-11 is-offset-1'>
-      <div class="field is-grouped">
-        <div class="control">
-          <%= f.submit '解決策を見る', class:'mt-6 ml-6 custom-btn btn-1 submit-button button btn-width' %>
-        </div>
       </div>
+    <% end %>
+    <div class='column is-8 is-offset-2 pt-6 pb-6'>
+      <%= image_tag 'trouble_img'%>
     </div>
-  <% end %>
-</div>
-
+  </div>
+</main>
