@@ -11,11 +11,6 @@
           <%= b.label(class: "radio-label has-text-left mt-3 mb-3 p-3") { b.radio_button(class: "radio-button radio m-5") + b.text } %>
         <% end %>
       </div>
-
-      <div class='column is-8 is-offset-2 pt-6 pb-6'>
-        <%= image_tag 'category_img'%>
-      </div>
-
       <div class='p-3'>
         <div class="field is-grouped is-grouped-centered">
           <div class="control">
@@ -24,5 +19,8 @@
         </div>
       </div>
     <% end %>
+    <div class='column is-8 is-offset-2 pt-6 pb-6'>
+      <%= image_tag 'category_img'%>
+    </div>
   </div>
 </main>
