@@ -13,3 +13,17 @@
 .wise-saying {
   font-size: 3.5rem;
 }
+
+// 解決策エリアの表示/非表示
+.is-opacity {
+	-webkit-transition: all 5s;
+	-moz-transition: all 5s;
+	-ms-transition: all 5s;
+	-o-transition: all 5s;
+	transition: all 5s;
+  opacity: 0;
+}
+
+.is-opacity-active {
+  opacity: 1;
+}
