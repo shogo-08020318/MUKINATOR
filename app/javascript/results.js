@@ -27,16 +27,21 @@ $(function() {
     $(this).addClass('is-opacity-active');
   });
 
+  // 画像
+  $('#result-img').delay(20000).queue(function(){
+    $(this).addClass('is-opacity-active');
+  });
+
   // 名言エリア
-  $('#wise-saying-label').delay(20000).queue(function(){
+  $('#wise-saying-label').delay(21000).queue(function(){
     $(this).addClass('is-opacity-active');
   });
 
-  $('#wise-saying').delay(22000).queue(function(){
+  $('#wise-saying').delay(23000).queue(function(){
     $(this).addClass('is-opacity-active');
   });
 
-  $('#syawing-person').delay(23000).queue(function(){
+  $('#syawing-person').delay(24000).queue(function(){
     $(this).addClass('is-opacity-active');
   });
 });
