@@ -4,6 +4,7 @@
 
 .solution {
   font-size: 5rem;
+  color: red;
 }
 
 .wise-saying-label {
@@ -12,4 +13,18 @@
 
 .wise-saying {
   font-size: 3.5rem;
+}
+
+// 解決策エリアの表示/非表示
+.is-opacity {
+	-webkit-transition: all 3s;
+	-moz-transition: all 3s;
+	-ms-transition: all 3s;
+	-o-transition: all 3s;
+	transition: all 3s;
+  opacity: 0;
+}
+
+.is-opacity-active {
+  opacity: 1;
 }
