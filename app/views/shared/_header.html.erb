@@ -14,14 +14,17 @@
 
     <div id="navbarBasicExample" class="navbar-menu">
       <div class="navbar-end">
-        <%= link_to '#', class: 'navbar-item' do %>
+        <%= link_to 'https://docs.google.com/forms/d/e/1FAIpQLSeGNV5PSgn1jYby6-zsnthnu6-k4OPA_OW0uWlI8KtAALpnOg/viewform?usp=sf_link', class: 'navbar-item' do %>
           お悩み追加依頼
         <% end %>
-        <%= link_to '#', class: 'navbar-item' do %>
-          お問い合わせ
+        <%= link_to privacy_path, method: :get, class: 'navbar-item' do %>
+          プライバシーポリシー
         <% end %>
-        <%= link_to '#', class: 'navbar-item' do %>
+        <%= link_to terms_path, method: :get, class: 'navbar-item' do %>
           利用規約
+        <% end %>
+        <%= link_to 'https://docs.google.com/forms/d/e/1FAIpQLSew177mPibuqivqlC9ilaTS1It9aG2tTL3zAokK8HgjnuLXJA/viewform?usp=sf_link', class: 'navbar-item' do %>
+          お問い合わせ
         <% end %>
       </div>
     </div>
