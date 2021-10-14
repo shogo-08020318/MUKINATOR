@@ -8,7 +8,7 @@
     <%= form_with url: results_path, local: true do |f| %>
       <div class='p-6'>
         <% @troubles.each do |trouble| %>
-          <div class='columns p-3 m-3'>
+          <div class='columns'>
             <div class='trouble-button-area column is-11 is-offset-1'>
               <%= f.radio_button :trouble_id, trouble.id, class:'radio-button radio trouble-button button mb-4 mt-4' %>
               <%= f.label :trouble_id, trouble.name, value: trouble.id, class:'trouble-label has-text-left ml-2 pl-2 mb-4 mt-4' %>
