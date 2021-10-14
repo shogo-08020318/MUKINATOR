@@ -7,18 +7,12 @@
 }
 
 .trouble-label {
-  font-size: 4rem;
+  font-size: 3rem;
 }
 
 // ラジオボタンの配置
 .trouble-button-area {
-  display:flex;
-}
-
-// ボタンカスタマイズ
-.trouble-trouble-button-area {
-	width: 90%;
-  margin: 2em auto;
+  display: flex;
 }
 
 // アニメーション
@@ -32,16 +26,15 @@
 	100% {
 		width: 400px;
 		height: 400px;
-		margin-top: -185px;
-		margin-left: -185px;
+		margin-top: -205px;
+		margin-left: -220px;
 		opacity: 0;
 	}
 }
 
 .trouble-button-area .radio-button {
 	position: relative;
-	position: relative;
-	top: 13.33333px;
+	top: 12px;
 	right: 0;
 	bottom: 0;
 	left: 0;
@@ -94,7 +87,7 @@
 	border-radius: 50%;
 }
 .trouble-button-area label {
-	line-height: 40px;
+	line-height: 50px;
 	display: block;
 }
 
