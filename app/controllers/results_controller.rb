@@ -14,6 +14,7 @@ class ResultsController < ApplicationController
     # 悩みのカテゴリー選択ページ
       render 'results/trouble_category'
     else
+      flash.now[:danger] = 'ニックネームを入力してください。'
       render 'results/nickname'
     end
   end
@@ -26,6 +27,7 @@ class ResultsController < ApplicationController
     # 悩みの選択ページ
       render 'results/trouble_select'
     else
+      flash.now[:danger] = '悩みのカテゴリーを選択してください。'
       render 'results/trouble_category'
     end
   end
@@ -49,6 +51,7 @@ class ResultsController < ApplicationController
     else
       # ここで再度悩みを取得しないと、レンダリング先で@troublesがnilになる
       @troubles = Trouble.where(kind: session[:kind])
+      flash.now[:danger] = '悩みを選択してください。'
       render 'results/trouble_select'
     end
   end
