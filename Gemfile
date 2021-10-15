@@ -37,6 +37,9 @@ gem 'google-api-client'
 # design_bulma
 gem "bulma-rails", "~> 0.9.1"
 
+# seed_fu
+gem 'seed-fu'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
