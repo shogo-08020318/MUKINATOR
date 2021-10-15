@@ -1,0 +1,15 @@
+ja:
+  static_pages:
+    terms:
+      title: 利用規約
+    privacy:
+      title: プライバシーポリシー
+  results:
+    nickname:
+      title: ニックネーム入力
+    trouble_category:
+      title: 悩みカテゴリー選択
+    trouble_select:
+      title: 悩み選択
+    result:
+      title: 解決策
