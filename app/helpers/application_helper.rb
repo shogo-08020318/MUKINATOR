@@ -13,7 +13,7 @@ module ApplicationHelper
       charset: 'utf-8',
       description: '日常生活で生まれる悩みや不安を全て筋トレで解決するアプリ',
       keywords: '筋肉, 筋トレ, ボディメイク, 悩み, 不安',
-      canonical: 'https://mukinator.herokuapp.com/',
+      canonical: request.original_url,
       separator: '|',
       icon: [
         { href: image_url('favicon.png') },
@@ -24,7 +24,7 @@ module ApplicationHelper
         title: :title,
         description: :description,
         type: 'website',
-        url: 'https://mukinator.herokuapp.com/',
+        url: request.original_url,
         image: image_url('ogp.png'),
         locale: 'ja_JP'
       },
