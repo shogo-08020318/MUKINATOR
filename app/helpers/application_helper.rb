@@ -24,7 +24,7 @@ module ApplicationHelper
         title: :title,
         description: :description,
         type: 'website',
-        url: request.original_url,
+        url: 'https://mukinator.herokuapp.com/',
         image: image_url('ogp.png'),
         locale: 'ja_JP'
       },
