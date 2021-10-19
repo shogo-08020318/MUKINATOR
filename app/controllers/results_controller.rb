@@ -30,18 +30,30 @@ class ResultsController < ApplicationController
       session[:reason] = Reason.find(session[:trouble_id]).id
       @result = Result.new(name: session[:nickname], reason_id: session[:reason])
       @result.save!
-      @video = []
-      @video[0] = Exercise.where(category: 'man').sample
-      @video[1] = Exercise.where(category: 'woman').sample
-      @video[2] = Exercise.where(category: 'other').sample
-      @word = WiseSaying.all.sample
-      render 'results/result'
+      # @video = []
+      # @video[0] = Exercise.where(category: 'man').sample
+      # @video[1] = Exercise.where(category: 'woman').sample
+      # @video[2] = Exercise.where(category: 'other').sample
+      # @word = WiseSaying.all.sample
+      redirect_to result_path(@result)
+
+      # render 'results/result'
     else
       # ここで再度悩みを取得しないと、レンダリング先で@troublesがnilになる
       @troubles = Trouble.where(kind: session[:kind])
       flash.now[:danger] = '悩みを選択してください。'
       render 'results/trouble_select'
     end
+  end
+
+  def show
+    @result = Result.find(params[:id])
+    @video = []
+    @video[0] = Exercise.where(category: 'man').sample
+    @video[1] = Exercise.where(category: 'woman').sample
+    @video[2] = Exercise.where(category: 'other').sample
+    @word = WiseSaying.all.sample
+    render 'results/result'
   end
 
   private
