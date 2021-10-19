@@ -40,7 +40,6 @@ yarn-debug.log*
 
 # Ignore vendor
 /vendor
-/config/database.yml
 /public/uploads
 
 # Ignore local settings
