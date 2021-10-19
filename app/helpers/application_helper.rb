@@ -8,11 +8,11 @@ module ApplicationHelper
   def default_meta_tags
     {
       site: 'MUKINATOR',
-      title: '悩みを筋トレで解決！',
+      title: 'この世は筋肉が全て！',
       reverse: true,
       charset: 'utf-8',
       description: '日常生活で生まれる悩みや不安を全て筋トレで解決するアプリ',
-      keywords: '筋肉, 筋トレ, ボディメイク, 悩み, 不安',
+      keywords: '筋肉, 筋トレ, ボディメイク, 悩み, 不安, 解決',
       canonical: request.original_url,
       separator: '|',
       icon: [
