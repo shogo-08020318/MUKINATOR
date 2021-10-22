@@ -27,6 +27,7 @@
 @import 'trouble_select';
 @import 'wise_sayings';
 @import 'result';
+@import '@fortawesome/fontawesome-free/scss/fontawesome';
 
 // 全てのbodyに適用
 body {
@@ -41,4 +42,17 @@ body {
 // bodyの高さが足りないので追加
 main {
   min-height: 1780px;
+}
+
+// twitterシェアボタン
+.share-button {
+  position: fixed;
+  opacity: 0.9;
+  right: 50px;
+  bottom: 50px;
+  border-radius: 50%;
+  padding: 35px;
+  background-color: #55ACEE;
+  font-size: 9rem;
+  color: white;
 }
