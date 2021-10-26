@@ -26,13 +26,11 @@ class ResultsController < ApplicationController
 
   def create
     if params[:trouble_id].present?
-      session[:trouble_id] = params[:trouble_id]
-      session[:reason] = Reason.find(session[:trouble_id]).id
-      @result = Result.new(name: session[:nickname], reason_id: session[:reason])
+      reason = Reason.find(params[:trouble_id]).id
+      @result = Result.new(name: session[:nickname], reason_id: reason)
       @result.save!
       redirect_to result_path(@result)
     else
-      # ここで再度悩みを取得しないと、レンダリング先で@troublesがnilになる
       @troubles = Trouble.where(kind: session[:kind])
       flash.now[:danger] = '悩みを選択してください。'
       render 'results/trouble_select'

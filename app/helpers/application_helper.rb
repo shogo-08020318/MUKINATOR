@@ -2,7 +2,7 @@ module ApplicationHelper
   def page_title(page_title = '')
     base_title = 'MUKINATOR'
 
-    page_title.empty? ? base_title : page_title + ' | ' + base_title
+    page_title.empty? ? base_title : "#{page_title} | #{base_title}"
   end
 
   def default_meta_tags
@@ -17,7 +17,7 @@ module ApplicationHelper
       separator: '|',
       icon: [
         { href: image_url('favicon.png') },
-        { href: image_url('favicon.png'), rel: 'apple-touch-icon', sizes: '180x180', type: 'image/jpg' },
+        { href: image_url('favicon.png'), rel: 'apple-touch-icon', sizes: '180x180', type: 'image/jpg' }
       ],
       og: {
         site_name: :site,
