@@ -2,22 +2,38 @@
   position: fixed;
   top: 0;
   left: 0;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   background: radial-gradient( circle 1000px at center, #671d92 5%, #000 90% );
   z-index: 9000;
 }
 
-.loading-title {
-  font-size: 5rem;
+.loading-wise-saying-area {
+  position: absolute;
+  top: 25%;
+  left: 0;
+  right: 0;
 }
 
-.loading-wise-saying {
+@media screen and (max-width: 480px) {
+  .loading-wise-saying-area {
+    position: absolute;
+    top: 35%;
+    left: 0;
+    right: 0;
+  }
+}
+
+.loading-title {
   font-size: 4rem;
 }
 
-.loading-person {
+.loading-wise-saying {
   font-size: 3.5rem;
+}
+
+.loading-person {
+  font-size: 3rem;
 }
 
 .loading-mesaage {

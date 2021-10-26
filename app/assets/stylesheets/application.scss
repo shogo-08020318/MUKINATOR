@@ -32,9 +32,10 @@
 // 全てのbodyに適用
 body {
   top: 100px;
+  min-width: 800px;
   text-align: center;
   font-family: 'Reggae One', cursive,  sans-serif;
-  font-size: 1.5rem;
+  font-size: 1rem;
   color: #fff;
   background-color: #000;
 }
@@ -42,6 +43,8 @@ body {
 // bodyの高さが足りないので追加
 main {
   min-height: 1780px;
+  // width: 100%;
+  // overflow: hidden;
 }
 
 // twitterシェアボタン
