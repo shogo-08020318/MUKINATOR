@@ -2,22 +2,29 @@
   position: fixed;
   top: 0;
   left: 0;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   background: radial-gradient( circle 1000px at center, #671d92 5%, #000 90% );
   z-index: 9000;
 }
 
-.loading-title {
-  font-size: 5rem;
+.loading-wise-saying-area {
+  position: absolute;
+  top: 30%;
+  left: 0;
+  right: 0;
 }
 
-.loading-wise-saying {
+.loading-title {
   font-size: 4rem;
 }
 
-.loading-person {
+.loading-wise-saying {
   font-size: 3.5rem;
+}
+
+.loading-person {
+  font-size: 3rem;
 }
 
 .loading-mesaage {
@@ -39,11 +46,11 @@
 // ローディングアニメーション
 .rotation {
   animation: rotation 1s infinite linear;
-  border: 7px solid rgba(255, 255, 255, 0.2);
+  border: 4px solid rgba(255, 255, 255, 0.2);
   border-radius: 50%;
   border-top-color: rgba(255, 255, 255, 0.7);
-  height: 6em;
-  width: 6em;
+  height: 3em;
+  width: 3em;
   margin: auto;
 }
 
