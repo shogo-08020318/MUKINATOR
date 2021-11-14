@@ -49,12 +49,4 @@ class ResultsController < ApplicationController
   def nickname_params
     params.require(:result).permit(:name)
   end
-
-  def youtube_get(categories)
-    videos = []
-    categories.each do |category|
-      videos << Exercise.where(category: category).sample
-    end
-    videos
-  end
 end
