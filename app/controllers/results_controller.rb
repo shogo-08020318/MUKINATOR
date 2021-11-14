@@ -16,8 +16,7 @@ class ResultsController < ApplicationController
 
   def trouble_select
     if params[:kind].present?
-      session[:kind] = params[:kind]
-      @troubles = Trouble.where(kind: session[:kind])
+      @troubles = Trouble.where(kind: params[:kind])
     else
       flash.now[:danger] = '悩みのカテゴリーを選択してください。'
       render 'results/trouble_category'
