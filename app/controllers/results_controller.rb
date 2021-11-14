@@ -38,10 +38,8 @@ class ResultsController < ApplicationController
 
   def show
     @result = Result.find(params[:id])
-    @video = []
-    @video[0] = Exercise.where(category: 'man').sample
-    @video[1] = Exercise.where(category: 'woman').sample
-    @video[2] = Exercise.where(category: 'other').sample
+    categories = %w[man woman other]
+    @video = youtube_get(categories)
     @word = WiseSaying.all.sample
     render 'results/result'
   end
@@ -50,5 +48,13 @@ class ResultsController < ApplicationController
 
   def nickname_params
     params.require(:result).permit(:name)
+  end
+
+  def youtube_get(categories)
+    videos = []
+    categories.each do |category|
+      videos << Exercise.where(category: category).sample
+    end
+    videos
   end
 end
