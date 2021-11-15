@@ -39,7 +39,7 @@ class ResultsController < ApplicationController
   def show
     @result = Result.find(params[:id])
     categories = %w[man woman other]
-    @video = youtube_get(categories)
+    @videos = youtube_get(categories)
     @word = WiseSaying.all.sample
     render 'results/result'
   end
