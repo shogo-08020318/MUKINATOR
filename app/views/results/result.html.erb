@@ -36,21 +36,7 @@
   <!-- YouTube動画表示エリア -->
     <div class="youtube-videos p-6"> 
       <p class='is-size-1'>YouTube動画</p>
-      <div class="youtube-video p-5">
-        <%= content_tag 'iframe', nil, width: 500, height: 300, src: "#{@video[0].video}", \
-            frameborder: 0, gesture: 'media', allow: 'encrypted-media', allowfullscreen: true %>
-      </div>
-
-      <div class="youtube-video p-5">
-        <%= content_tag 'iframe', nil, width: 500, height: 300, src: "#{@video[1].video}", \
-            frameborder: 0, gesture: 'media', allow: 'encrypted-media', allowfullscreen: true %>
-      </div>
-
-      <div class="youtube-video p-5">
-        <%= content_tag 'iframe', nil, width: 500, height: 300, src: "#{@video[2].video}", \
-            frameborder: 0, gesture: 'media', allow: 'encrypted-media', allowfullscreen: true %>
-      </div>
-    </div>
+      <%= render partial: 'exercise', collection: @videos, as: :video %>
 
     <div class="field is-grouped is-grouped-centered">
       <div class="columns">

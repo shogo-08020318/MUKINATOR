@@ -16,8 +16,7 @@ class ResultsController < ApplicationController
 
   def trouble_select
     if params[:kind].present?
-      session[:kind] = params[:kind]
-      @troubles = Trouble.where(kind: session[:kind])
+      @troubles = Trouble.where(kind: params[:kind])
     else
       flash.now[:danger] = '悩みのカテゴリーを選択してください。'
       render 'results/trouble_category'
@@ -39,10 +38,8 @@ class ResultsController < ApplicationController
 
   def show
     @result = Result.find(params[:id])
-    @video = []
-    @video[0] = Exercise.where(category: 'man').sample
-    @video[1] = Exercise.where(category: 'woman').sample
-    @video[2] = Exercise.where(category: 'other').sample
+    categories = %w[man woman other]
+    @videos = youtube_get(categories)
     @word = WiseSaying.all.sample
     render 'results/result'
   end
