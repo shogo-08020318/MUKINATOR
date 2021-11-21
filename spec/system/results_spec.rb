@@ -95,9 +95,21 @@ RSpec.describe "Results", type: :system do
       end
 
       it '悩みのカテゴリーが未選択の場合、ページが再表示されること' do
-        expect(current_path).to eq(trouble_category_results_path)
         click_button '次へ'
         expect(page).to have_content('悩みのカテゴリーを選択してください。')
+      end
+    end
+
+    context '解決策ページ' do
+      let(:result) { create(:result) }
+      it '選択した悩みに対応した結果が表示されること' do
+        visit result_path(result)
+        sleep 15
+        expect(current_path).to eq(result_path(result))
+        expect(page).to have_content('解決策')
+        expect(page).to have_content(result.name)
+        expect(page).to have_content(result.reason.trouble.name)
+        expect(page).to have_content(result.reason.name)
       end
     end
   end
