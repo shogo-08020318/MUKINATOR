@@ -12,11 +12,11 @@
 - 脳筋になるためのアドバイスを提案
 # プロダクト
 - 悩みに対して、解決策とその理由を提示
-- 性別に合わせてyoutube動画を紹介
+- 併せて、すぐ取り組める筋トレのyoutube動画を紹介
 # マーケット
 - 筋トレをしておらず、日常生活で悩みや不安を抱えてる人
 - ボディメイクを始めたいが何をしていいか分からない人
 # 画面遷移図
 https://www.figma.com/file/w3YXZCxvpkFddPwGQM0fd9/%E7%94%BB%E9%9D%A2%E9%81%B7%E7%A7%BB%E5%9B%B3?node-id=7%3A6
 # ER図
-https://i.gyazo.com/a72cdbd40b049ba2b48a99ecd0c52626.png
+https://i.gyazo.com/8caeb1a8ceb188360a0104520c11fbac.png
