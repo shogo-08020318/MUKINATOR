@@ -28,6 +28,10 @@ group :development, :test do
   gem 'better_errors'
   gem 'pry-byebug'
   gem 'binding_of_caller'
+
+  gem 'rspec-rails'
+  gem 'factory_bot_rails'
+  gem 'rspec_junit_formatter'
 end
 
 group :development do
@@ -35,4 +39,9 @@ group :development do
   gem 'listen', '~> 3.2'
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+end
+
+group :test do
+  gem 'capybara'
+  gem 'webdrivers'
 end
